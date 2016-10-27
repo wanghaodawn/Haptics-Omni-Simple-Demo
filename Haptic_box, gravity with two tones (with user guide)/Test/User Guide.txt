@@ -1,0 +1,56 @@
+A box and two gravity wells with different tones
+
+User Guide	--> by Hao Wang 2014.08 
+
+Warning: absolute address of the music is used, don't change the address of the folder
+
+
+Step1:
+setup VS2010
+professional:
+(X86) ed2k://|file|en_visual_studio_2010_professional_x86_dvd_509727.iso|2351316992|D395B6381AC129209EE80D9BED4BA5F1|/
+
+vs2010 Sp1:
+(x86 and x64) ed2k://|file|mu_visual_studio_2010_sp1_x86_x64_dvd_651704.iso|1592336384|C703F08639BBBE0F6F53C694C956F484|/ 
+
+Step2:
+Download PHANTOM Device Drivers (PDD)
+http://dl.geomagic.com/binaries/sensable/PDD517/Phantom_Device_Drivers_5.1.7_Release.exe
+
+Step3:
+Download OpenHaptics Academic Edition for Windows - v3.2.2
+http://dl.geomagic.com/binaries/GeomagicSolutions/OpenHaptics_Academic_Edition_v3.2.2.exe
+
+Step4:
+Open the VS2010 project: Test
+Just modify the parameters in Parameter modification Area, which is just after the "include" part of the code.
+All functions of parameters are detailed listed, just follow the instruction!
+
+PS: parameters except the trapezoid can be changed freely, but you can just change the height of trapezoid area
+instead of any other parameters for it is quite complex mathematically.
+
+
+/***************************************************************/
+/*****************Parameter modification Area*******************/
+// The parameter of the box
+#define EdgeX 100	// The edge of Box_x
+#define EdgeY 0		// The edge of Box_y	(Had better not change this, or there might be potential problems)
+#define EdgeZ 60	// The edge of Box_z
+#define PlainStiffness 1	//The stiffness of the box
+#define PopthroughForceThreshold 30	//The force needed to pop through
+
+//The parameter of the Gravity well 1
+#define GravityWellStiff1 0.075	//The Stiffness of Gravity Well 1
+#define GravityWellRadius1 20	//The Radius of Gravity Well 1
+#define GravityWell1PosX 80		//Define X parameter of Gravity Well 1
+#define GravityWell1PosY 0		//Define Y parameter of Gravity Well 1
+#define GravityWell1PosZ 0		//Define Z parameter of Gravity Well 1
+
+//The parameter of the Gravity well 2
+#define GravityWellStiff2 0.05	//The Stiffness of Gravity Well 2
+#define GravityWellRadius2 10	//The Radius of Gravity Well 2
+#define GravityWell2PosX 50		//Define X parameter of Gravity Well 2
+#define GravityWell2PosY 0		//Define Y parameter of Gravity Well 2
+#define GravityWell2PosZ 20		//Define Z parameter of Gravity Well 2
+/***************************************************************/
+/***************************************************************/
